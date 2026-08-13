@@ -1,0 +1,29 @@
+title: Git & GitHub — Travaux Pratiques
+description: Université Paris-Dauphine | Tunis — Première année
+remote_theme: just-the-docs/just-the-docs
+
+plugins:
+  - jekyll-remote-theme
+
+color_scheme: light
+search_enabled: true
+enable_copy_code_button: true
+heading_anchors: true
+
+# Liens affichés en haut à droite du site
+aux_links:
+  "Le projet guide-survie":
+    - "https://github.com/VOTRECOMPTE/guide-survie"
+
+aux_links_new_tab: true
+
+footer_content: "Module Git &amp; GitHub — Dauphine Tunis — 2026"
+
+# Pas de lien « modifier cette page » : les étudiants ne modifient pas ce site
+back_to_top: true
+back_to_top_text: "Revenir en haut"
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
