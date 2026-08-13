@@ -22,8 +22,7 @@ Utilisez-le : il évite les fautes de frappe, et surtout les guillemets
 courbes qui font échouer les commandes sans qu'on comprenne pourquoi.
 
 {: .warning }
-> Ne copiez jamais une commande sans l'avoir lue. En séance d'examen,
-> vous n'aurez pas ce site sous les yeux.
+> Ne copiez jamais une commande sans l'avoir lue. 
 
 ---
 
@@ -36,7 +35,7 @@ Vous n'avez pas besoin de savoir développer. Chaque modification à faire
 vous est donnée mot pour mot. Ce qui compte ici, ce n'est pas le code :
 c'est ce que vous faites avec Git autour du code.
 
-[Voir le dépôt du projet](https://github.com/VOTRECOMPTE/guide-survie){: .btn .btn-primary }
+[Voir le dépôt du projet](https://github.com/liliasfaxi/guide-survie){: .btn .btn-primary }
 
 ---
 
