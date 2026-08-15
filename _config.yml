@@ -2,6 +2,15 @@ title: Git & GitHub — Travaux Pratiques
 description: Université Paris-Dauphine | Tunis — Première année
 remote_theme: just-the-docs/just-the-docs
 
+# ==========================================================
+#  LE NUMÉRO DE LA SÉANCE EN COURS
+#
+#  L'antisèche affiche les blocs des séances 1 à ce numéro.
+#  Au début de chaque séance : augmentez de 1, commit, push.
+#  C'est la seule ligne à modifier.
+# ==========================================================
+seance: 2
+
 plugins:
   - jekyll-remote-theme
 
@@ -13,7 +22,7 @@ heading_anchors: true
 # Liens affichés en haut à droite du site
 aux_links:
   "Le projet guide-survie":
-    - "https://github.com/liliasfaxi/guide-survie"
+    - "https://github.com/VOTRECOMPTE/guide-survie"
 
 aux_links_new_tab: true
 

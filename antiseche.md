@@ -8,81 +8,62 @@ published: true
 {: .no_toc }
 
 Les commandes du module, avec ce qu'elles font vraiment.
-Cette page grandit au fil des séances.
+**Cette page grandit à chaque séance.**
 {: .fs-5 .fw-300 }
 
----
-
-## Se repérer dans le terminal
-
-| Commande | Ce qu'elle fait |
-|---|---|
-| `pwd` | Affiche où je suis |
-| `ls` | Liste ce qu'il y a ici |
-| `ls -a` | Liste tout, y compris les fichiers cachés |
-| `cd dossier` | Entre dans un dossier |
-| `cd ..` | Remonte d'un dossier |
-
-Touche **Tab** : complète un nom de fichier.
-Flèche **haut** : rappelle la commande précédente.
-Touche **q** : sort d'un affichage bloqué.
+<details open markdown="block">
+  <summary>Sommaire</summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
 
 ---
 
-## Se présenter à Git
-
-Une seule fois par machine.
-
-| Commande | Ce qu'elle fait |
-|---|---|
-| `git config --global user.name "Nom"` | Je dis qui je suis |
-| `git config --global user.email "adresse"` | Je donne mon adresse |
-| `git config --global --list` | Je vérifie ma configuration |
+{% if site.seance >= 1 %}{% include antiseche/s01.md %}
 
 ---
-
-## Le cycle de base
-
-| Commande | En français | Zone concernée |
-|---|---|---|
-| `git init` | Je crée un dépôt ici | Crée le dossier `.git` |
-| `git status` | Où en est chaque fichier ? | Les trois |
-| `git add fichier` | Je cadre ce fichier | Travail → Attente |
-| `git add .` | Je cadre tout ce qui a changé | Travail → Attente |
-| `git commit -m "message"` | Je déclenche la photo | Attente → Dépôt |
-| `git diff` | Qu'ai-je changé depuis la dernière fois ? | Travail |
-| `git log --oneline` | Montre-moi l'historique | Dépôt |
+{% endif %}
+{% if site.seance >= 2 %}{% include antiseche/s02.md %}
 
 ---
-
-## Le chemin d'un fichier
-
-```
-Répertoire de travail  --git add-->  Zone d'attente  --git commit-->  Dépôt
-```
-
-| État | Ce que Git en dit | Ce que ça signifie |
-|---|---|---|
-| Non suivi | `Untracked` | Git ne le connaît pas encore |
-| Modifié | `Changes not staged` | Changé, pas encore cadré |
-| Indexé | `Changes to be committed` | Cadré, prêt pour la photo |
-| Validé | `working tree clean` | Enregistré, en sécurité |
+{% endif %}
+{% if site.seance >= 3 %}{% include antiseche/s03.md %}
 
 ---
-
-## Ignorer des fichiers
-
-On écrit les noms à ignorer dans le fichier `.gitignore`, un par ligne.
-
-| Ligne écrite | Ce qui est ignoré |
-|---|---|
-| `notes.txt` | Ce fichier précis |
-| `*.log` | Tous les fichiers finissant par `.log` |
-| `brouillons/` | Tout le contenu de ce dossier |
-
-`.gitignore` n'agit que sur les fichiers **pas encore suivis**.
+{% endif %}
+{% if site.seance >= 4 %}{% include antiseche/s04.md %}
 
 ---
+{% endif %}
+{% if site.seance >= 5 %}{% include antiseche/s05.md %}
+
+---
+{% endif %}
+{% if site.seance >= 6 %}{% include antiseche/s06.md %}
+
+---
+{% endif %}
+{% if site.seance >= 7 %}{% include antiseche/s07.md %}
+
+---
+{% endif %}
+{% if site.seance >= 8 %}{% include antiseche/s08.md %}
+
+---
+{% endif %}
+{% if site.seance >= 10 %}{% include antiseche/s10.md %}
+
+---
+{% endif %}
+{% if site.seance >= 11 %}{% include antiseche/s11.md %}
+
+---
+{% endif %}
+{% if site.seance >= 12 %}{% include antiseche/s12.md %}
+
+---
+{% endif %}
 
 ## Les trois réflexes
 

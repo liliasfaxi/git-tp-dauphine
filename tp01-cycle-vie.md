@@ -38,7 +38,7 @@ published: true
 
 Rendez-vous sur le dépôt du projet :
 
-[github.com/VOTRECOMPTE/guide-survie](https://github.com/VOTRECOMPTE/guide-survie){: .btn }
+[github.com/liliasfaxi/guide-survie](https://github.com/liliasfaxi/guide-survie){: .btn }
 
 Cliquez sur le bouton vert **Code**, puis sur **Download ZIP**.
 Décompressez l'archive dans un dossier facile à retrouver — par exemple
@@ -68,7 +68,7 @@ Ouvrez un terminal, et déplacez-vous dans le dossier du projet.
 Adaptez le chemin à votre machine :
 
 ```
-cd Desktop/guide-survie
+cd <chemin-de-votre-projet>/guide-survie
 ```
 
 Vérifiez que vous êtes au bon endroit :
