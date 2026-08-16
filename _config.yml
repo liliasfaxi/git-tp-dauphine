@@ -22,7 +22,7 @@ heading_anchors: true
 # Liens affichés en haut à droite du site
 aux_links:
   "Le projet guide-survie":
-    - "https://github.com/VOTRECOMPTE/guide-survie"
+    - "https://github.com/liliasfaxi/guide-survie"
 
 aux_links_new_tab: true
 

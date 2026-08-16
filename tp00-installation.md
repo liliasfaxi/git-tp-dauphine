@@ -66,7 +66,7 @@ Une fois Git installé : menu Démarrer, tapez `Git Bash`, ouvrez-le.
 ### Windows
 
 1. Rendez-vous sur [git-scm.com/download/win](https://git-scm.com/download/win)
-2. Le téléchargement démarre seul. Lancez le fichier `.exe`.
+2. Cliquez sur "Click here to download" pour télécharger la dernière version de git. Lancez le fichier `.exe`.
 3. Cliquez **Next** à chaque écran sans rien changer, puis **Install**.
 
 L'installateur pose beaucoup de questions. Les réponses par défaut sont
@@ -214,9 +214,10 @@ Nous n'en utiliserons pratiquement pas d'autres.
 Deux raccourcis qui vous serviront tous les jours :
 
 - `cd ..` remonte d'un dossier ;
-- après avoir tapé les premières lettres d'un nom, la touche **Tab**
+- après avoir tapé les premières lettres d'une commande ou d'un chemin, la touche **Tab**
   complète le reste. Utilisez-la systématiquement : elle vous évitera
   la moitié de vos fautes de frappe.
+- pour revenir à la commande précédente sur le terminal, il suffit de cliquer sur la flèche du haut sur votre clavier. Cela vous évitera de retaper une longue commande.
 
 Essayez maintenant :
 
