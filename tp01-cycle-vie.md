@@ -422,5 +422,4 @@ Sortez avec `q`.
 
 ## En cas de blocage
 
-Consultez le [mur des pannes](pannes) — et **ajoutez-y la vôtre** si
-elle n'y figure pas encore.
+Consultez le [mur des pannes](pannes). Si la vôtre n'y figure pas, signalez-la moi.

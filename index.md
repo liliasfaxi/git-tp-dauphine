@@ -51,5 +51,4 @@ c'est ce que vous faites avec Git autour du code.
 ## Si vous êtes bloqué
 
 Le [mur des pannes](pannes) recense les erreurs déjà rencontrées et leur
-solution. Regardez-y avant de lever la main — et ajoutez-y la vôtre si
-elle n'y figure pas encore.
+solution. Regardez-y avant de lever la main — et proposez-moi vos ajouts si vous rencontrez d'autres difficultés.

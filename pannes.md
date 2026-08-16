@@ -138,7 +138,7 @@ Vérifiez ces trois choses, dans l'ordre :
 1. **Avez-vous copié le `$` du début ?** Il ne fait pas partie de la
    commande. Sur ce site, il n'y en a jamais : si vous en voyez un
    ailleurs, ne le copiez pas.
-2. **Vos guillemets sont-ils droits ?** `"` et non `"` ou `"`. Les
+2. **Vos guillemets sont-ils droits ?** Les
    guillemets courbes viennent de Word ou d'une conversation, et Git
    ne les comprend pas. Ils sont presque impossibles à distinguer à
    l'œil nu : retapez-les à la main en cas de doute.
