@@ -1,10 +1,10 @@
 ---
-title: Le mur des pannes
+title: Les pannes connues
 nav_order: 90
 published: true
 ---
 
-# Le mur des pannes
+# Les pannes connues
 {: .no_toc }
 
 <details open markdown="block">
@@ -17,10 +17,10 @@ published: true
 ---
 
 Cette page recense les erreurs rencontrées en séance et leur solution.
+**Regardez-y avant de lever la main.**
 
-**Regardez-y avant de lever la main.** Et quand vous résolvez une panne
-qui n'y figure pas, signalez-la : elle servira à toute la promo. À partir
-de la séance 10, vous pourrez l'ajouter vous-même par *pull request*.
+Votre panne n'y figure pas ? Signalez-la moi en séance : je l'ajouterai
+ici, et elle servira à toute la promo.
 
 {: .note }
 > Un message d'erreur n'est pas une punition. C'est la seule façon qu'a
@@ -87,9 +87,70 @@ ssh -T git@github.com
 Si la réponse commence par `Hi` suivi de votre nom d'utilisateur, votre
 clé fonctionne et l'erreur vient de l'adresse du dépôt.
 
-**Solution.** Reprenez la configuration de la clé SSH (séance 3), en
-vérifiant que vous avez bien copié le fichier terminant par `.pub`,
-en entier et sur une seule ligne.
+**Solutions, dans cet ordre.**
+
+1. La clé est-elle chargée dans l'agent ?
+
+   ```
+   ssh-add -l
+   ```
+
+   Une liste vide : rechargez-la.
+
+   ```
+   ssh-add ~/.ssh/id_ed25519
+   ```
+
+2. La clé collée sur GitHub est-elle la bonne ? Comparez avec :
+
+   ```
+   cat ~/.ssh/id_ed25519.pub
+   ```
+
+3. La clé est-elle complète et sur **une seule ligne** ? Une clé coupée
+   au collage ne fonctionne jamais. Supprimez-la sur GitHub et
+   recollez-la.
+
+---
+
+## `id_ed25519 already exists. Overwrite (y/n)?`
+
+**Cause.** Vous avez déjà une clé sur cette machine.
+
+**Solution.** Répondez **`n`**. Réutilisez la clé existante : elle est
+parfaitement valable. L'écraser vous déconnecterait des autres services
+qui l'utilisent.
+
+---
+
+## `ssh -T` reste bloqué sans rien afficher
+
+**Cause.** Le réseau bloque le port SSH. C'est fréquent sur les réseaux
+d'entreprise ou d'établissement.
+
+**Solution.** Ce n'est pas réparable depuis votre machine : basculez sur
+le plan B du TP2, l'authentification par token (PAT) avec des adresses
+en `https://`.
+
+---
+
+## `Are you sure you want to continue connecting (yes/no)?`
+
+Ce n'est pas une erreur. C'est la question posée à la **première**
+connexion à un serveur inconnu.
+
+**Solution.** Écrivez `yes` en toutes lettres, puis Entrée. La question
+ne reviendra plus.
+
+---
+
+## `Support for password authentication was removed`
+
+**Cause.** Vous avez saisi votre mot de passe GitHub. Il n'est plus
+accepté depuis 2021.
+
+**Solution.** Utilisez SSH (TP2), ou un token à la place du mot de
+passe si vous êtes en `https://`.
 
 ---
 
@@ -138,10 +199,11 @@ Vérifiez ces trois choses, dans l'ordre :
 1. **Avez-vous copié le `$` du début ?** Il ne fait pas partie de la
    commande. Sur ce site, il n'y en a jamais : si vous en voyez un
    ailleurs, ne le copiez pas.
-2. **Vos guillemets sont-ils droits ?** Les
+2. **Vos guillemets sont-ils droits ?** `"` et non `"` ou `"`. Les
    guillemets courbes viennent de Word ou d'une conversation, et Git
    ne les comprend pas. Ils sont presque impossibles à distinguer à
    l'œil nu : retapez-les à la main en cas de doute.
 3. **Y a-t-il une faute de frappe ?** `git stauts` ne veut rien dire.
    Utilisez la touche **Tab** et les flèches ↑ pour rappeler une
    commande précédente.
+
