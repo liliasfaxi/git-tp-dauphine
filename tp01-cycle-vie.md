@@ -71,6 +71,9 @@ Adaptez le chemin à votre machine :
 cd <chemin-de-votre-projet>/guide-survie
 ```
 
+{: .note }
+> Dans Windows, Le plus simple, c'est d'ouvrir l'explorateur des fichiers dans le répertoire contenant le dossier `guide-survie`, faire un clic droit sur celui-ci, et cliquer sur `Open Git Bash here`. Le terminal s'ouvrira directement dans le dossier du projet.
+
 Vérifiez que vous êtes au bon endroit :
 
 ```
@@ -128,14 +131,13 @@ git status
 
 Git vous répond à peu près ceci :
 
-```
-On branch main
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>On branch main
 
 No commits yet
 
 Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        .gitignore
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+<span style="color:#C41E3A">        .gitignore
         README.md
         css/
         data/
@@ -143,7 +145,10 @@ Untracked files:
         images/
         index.html
         js/
-```
+        outils/</span>
+
+nothing added to commit but untracked files present (use "git add" to track)</code>
+</pre></div></div>
 
 ### Ce que ça veut dire
 
@@ -207,9 +212,7 @@ d'un dépôt Git.
 
 ## Étape 6 — T01 : changer le titre du site
 
-Ouvrez `index.html` dans votre éditeur de texte.
-
-Repérez la **ligne 12** :
+Ouvrez `index.html` dans votre éditeur de texte. Repérez la **ligne 12** :
 
 ```
   <h1 class="entete__titre">Guide de Survie</h1>
