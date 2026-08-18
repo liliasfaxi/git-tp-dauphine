@@ -1,5 +1,5 @@
 ---
-title: "TP0 — Installer et configurer Git"
+title: "TP0 · Installer Git"
 nav_order: 2
 published: true
 ---

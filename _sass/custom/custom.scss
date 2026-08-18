@@ -1,0 +1,67 @@
+/* =====================================================
+   BARRE LATÉRALE — distinguer les TP des ressources
+
+   Les règles ciblent la POSITION dans le menu, et non
+   l'adresse des pages : sur la page courante, le thème
+   supprime l'attribut href du lien.
+
+   Une seule valeur à maintenir : le nombre de pages
+   « ressources », toujours placées en fin de menu
+   (antisèche, pannes, et plus tard certification).
+   ===================================================== */
+
+$nb-ressources: 3;
+
+/* ---- Les pages de TP ----
+   Tout ce qui n'est ni l'accueil, ni une ressource. */
+.nav-list > .nav-list-item:not(:first-child):not(:nth-last-child(-n + #{$nb-ressources})) > .nav-list-link {
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+/* Un petit repère coloré devant chaque TP */
+.nav-list > .nav-list-item:not(:first-child):not(:nth-last-child(-n + #{$nb-ressources})) > .nav-list-link::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 0.8em;
+  margin-right: 0.55rem;
+  vertical-align: -1px;
+  border-radius: 2px;
+  background: #7253ed;
+  opacity: 0.4;
+}
+
+.nav-list > .nav-list-item:not(:first-child):not(:nth-last-child(-n + #{$nb-ressources})) > .nav-list-link.active::before,
+.nav-list > .nav-list-item:not(:first-child):not(:nth-last-child(-n + #{$nb-ressources})) > .nav-list-link:hover::before {
+  opacity: 1;
+}
+
+/* ---- Les pages ressources : plus discrètes ---- */
+.nav-list > .nav-list-item:nth-last-child(-n + #{$nb-ressources}) > .nav-list-link {
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #5c5962;
+}
+
+/* ---- Titre de groupe, devant la première ressource ---- */
+.nav-list > .nav-list-item:nth-last-child(#{$nb-ressources}) {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e6e3e8;
+  position: relative;
+}
+
+.nav-list > .nav-list-item:nth-last-child(#{$nb-ressources})::before {
+  content: "Ressources";
+  position: absolute;
+  top: 0.55rem;
+  left: 0.75rem;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #959396;
+}

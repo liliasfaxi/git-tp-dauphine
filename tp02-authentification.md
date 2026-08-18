@@ -1,5 +1,5 @@
 ---
-title: "TP2 — Se connecter à GitHub"
+title: "TP2 · Se connecter à GitHub"
 nav_order: 4
 published: false
 ---

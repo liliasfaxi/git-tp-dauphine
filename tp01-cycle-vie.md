@@ -1,5 +1,5 @@
 ---
-title: "TP1 — Le cycle de vie des fichiers"
+title: "TP1 · Cycle de vie des fichiers"
 nav_order: 3
 published: true
 ---
