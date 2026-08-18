@@ -226,8 +226,71 @@ Si votre nom d'utilisateur s'affiche, **votre TP est terminé.**
 {: .note }
 > Terminé en avance ? Aidez les autres membres de votre groupe.
 > Ce TP se réussit à quatre bien plus vite qu'à un.
+> Sinon, passez aux étapes 7 et 8, elles sont facultatives mais très souhaitées
+>
+
+{: .warning }
+> **Bloqué ?** Consultez la rubrique [Si ça ne marche pas](#si-ça-ne-marche-pas)
+> en bas de page avant de lever la main.
 
 ---
+
+## Étape 7 — Demander votre statut étudiant
+
+**Facultatif, mais à lancer aujourd'hui.**
+
+GitHub accorde aux étudiants vérifiés un ensemble d'avantages gratuits,
+réunis sous le nom de **GitHub Student Developer Pack**. La vérification
+demande plusieurs jours : mieux vaut la demander maintenant que d'en
+avoir besoin dans deux mois.
+
+1. Rendez-vous sur [education.github.com/pack](https://education.github.com/pack)
+2. **Sign up for Student Developer Pack**
+3. Utilisez votre **adresse universitaire** et le nom de l'établissement
+4. Fournissez le justificatif demandé (carte d'étudiant, certificat de
+   scolarité)
+
+{: .note }
+> Votre compte doit avoir la double authentification active — c'est
+> l'étape 1 de ce TP. Utilisez la même adresse universitaire sur votre
+> compte GitHub et dans le formulaire : c'est ce qui accélère le plus
+> la validation.
+
+Parmi les avantages : des outils de développement gratuits, et selon
+les périodes, un bon pour passer gratuitement la certification
+**GitHub Foundations**. La disponibilité de ce bon varie — ne comptez
+pas dessus, mais demandez la vérification, elle ne coûte rien.
+
+---
+
+## Étape 8 — Soigner votre profil
+
+**Facultatif.** À faire si vous avez terminé et aidé vos camarades.
+
+Votre profil GitHub est une page publique. Dans deux ans, elle pourra
+accompagner une candidature. Elle commence aujourd'hui.
+
+Sur votre page de profil, cliquez sur **Edit profile** :
+
+- une **photo** ou un avatar reconnaissable ;
+- votre **nom** en toutes lettres ;
+- une **bio** d'une ligne : « Étudiante en première année à Dauphine Tunis » ;
+- votre **localisation**.
+
+### Le README de profil
+
+C'est l'astuce que peu de gens connaissent. Créez un dépôt **public**
+dont le nom est **exactement votre nom d'utilisateur** — par exemple
+`amira-bensalah/amira-bensalah` — et cochez **Add a README file**.
+
+Le contenu de ce README s'affichera en haut de votre profil.
+
+{: .note }
+> Nous verrons la syntaxe Markdown en détail en séance 4. Pour
+> l'instant, `# Titre` fait un grand titre et `**gras**` met en gras.
+
+---
+
 
 ## Si ça ne marche pas
 

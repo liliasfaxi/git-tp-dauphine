@@ -126,6 +126,9 @@ git config --global user.email "amira.bensalah@dauphine.tn"
 ```
 
 {: .note }
+> **Utilisez votre email dauphine**! cela vous sera utile ultérieurement pour vous inscrire à la certification github
+
+{: .note }
 > `--global` signifie « pour tous mes projets sur cette machine ».
 > Vous ne referez cette configuration qu'une seule fois, aujourd'hui.
 
