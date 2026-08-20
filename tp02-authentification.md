@@ -376,5 +376,4 @@ git config --global credential.helper store
 
 ## En cas de blocage
 
-Consultez les [pannes connues](pannes). Si la vôtre n'y figure pas,
-**signalez-la moi** : je l'ajouterai à la liste.
+Consultez le [mur des pannes](pannes). Si la vôtre n'y figure pas, signalez-la moi.

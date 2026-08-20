@@ -16,8 +16,12 @@ published: true
 
 ---
 
-Cette page recense les erreurs rencontrées en séance et leur solution.
-**Regardez-y avant de lever la main.**
+Cette page recense toutes les erreurs rencontrées en séance et leur
+solution. **Regardez-y avant de lever la main.**
+
+Les titres reprennent le **message d'erreur exact**. Le plus rapide est
+d'utiliser la recherche, en haut de la page : copiez-y quelques mots du
+message que vous voyez à l'écran.
 
 Votre panne n'y figure pas ? Signalez-la moi en séance : je l'ajouterai
 ici, et elle servira à toute la promo.
@@ -29,7 +33,9 @@ ici, et elle servira à toute la promo.
 
 ---
 
-## `git: command not found`
+## Le terminal et l'installation
+
+### `git: command not found`
 
 Aussi vu comme : *« git » n'est pas reconnu en tant que commande interne*.
 
@@ -44,7 +50,7 @@ dans `cmd` ou PowerShell.
 
 ---
 
-## L'affichage est bloqué et je ne peux plus rien taper
+### L'affichage est bloqué et je ne peux plus rien taper
 
 Vous voyez peut-être `:` ou `(END)` en bas de l'écran.
 
@@ -54,7 +60,7 @@ Vous voyez peut-être `:` ou `(END)` en bas de l'écran.
 
 ---
 
-## Je me suis trompé dans mon nom ou mon adresse
+### Je me suis trompé dans mon nom ou mon adresse
 
 **Solution.** Relancez simplement la commande avec la bonne valeur.
 Elle écrase l'ancienne, il n'y a rien à supprimer.
@@ -65,7 +71,43 @@ git config --global user.name "Le bon nom"
 
 ---
 
-## `Permission denied (publickey)`
+### `Please tell me who you are`
+
+**Cause.** Git ne connaît pas votre identité : la configuration de
+l'étape 4 du TP0 n'a pas été faite, ou pas avec `--global`.
+
+**Solution.**
+
+```
+git config --global user.name "Votre Nom"
+```
+
+```
+git config --global user.email "votre.adresse@dauphine.tn"
+```
+
+---
+
+### Ma commande échoue et je ne vois pas pourquoi
+
+Vérifiez ces trois choses, dans l'ordre :
+
+1. **Avez-vous copié le `$` du début ?** Il ne fait pas partie de la
+   commande. Sur ce site, il n'y en a jamais : si vous en voyez un
+   ailleurs, ne le copiez pas.
+2. **Vos guillemets sont-ils droits ?** `"` et non `"` ou `"`. Les
+   guillemets courbes viennent de Word ou d'une conversation, et Git
+   ne les comprend pas. Ils sont presque impossibles à distinguer à
+   l'œil nu : retapez-les à la main en cas de doute.
+3. **Y a-t-il une faute de frappe ?** `git stauts` ne veut rien dire.
+   Utilisez la touche **Tab** et les flèches ↑ pour rappeler une
+   commande précédente.
+
+---
+
+## La connexion à GitHub
+
+### `Permission denied (publickey)`
 
 Message complet :
 
@@ -113,7 +155,7 @@ clé fonctionne et l'erreur vient de l'adresse du dépôt.
 
 ---
 
-## `id_ed25519 already exists. Overwrite (y/n)?`
+### `id_ed25519 already exists. Overwrite (y/n)?`
 
 **Cause.** Vous avez déjà une clé sur cette machine.
 
@@ -123,7 +165,7 @@ qui l'utilisent.
 
 ---
 
-## `ssh -T` reste bloqué sans rien afficher
+### `ssh -T` reste bloqué sans rien afficher
 
 **Cause.** Le réseau bloque le port SSH. C'est fréquent sur les réseaux
 d'entreprise ou d'établissement.
@@ -134,7 +176,7 @@ en `https://`.
 
 ---
 
-## `Are you sure you want to continue connecting (yes/no)?`
+### `Are you sure you want to continue connecting (yes/no)?`
 
 Ce n'est pas une erreur. C'est la question posée à la **première**
 connexion à un serveur inconnu.
@@ -144,7 +186,7 @@ ne reviendra plus.
 
 ---
 
-## `Support for password authentication was removed`
+### `Support for password authentication was removed`
 
 **Cause.** Vous avez saisi votre mot de passe GitHub. Il n'est plus
 accepté depuis 2021.
@@ -154,7 +196,9 @@ passe si vous êtes en `https://`.
 
 ---
 
-## `fatal: not a git repository`
+## Les commandes Git
+
+### `fatal: not a git repository`
 
 **Cause.** Vous n'êtes pas dans le bon dossier.
 
@@ -175,35 +219,138 @@ Vous devez voir un dossier `.git` dans la liste. S'il n'y est pas, vous
 
 ---
 
-## `Please tell me who you are`
+### `error: remote origin already exists`
 
-**Cause.** Git ne connaît pas votre identité : la configuration de
-l'étape 4 du TP0 n'a pas été faite, ou pas avec `--global`.
+**Cause.** Vous avez déjà lancé `git remote add origin` dans ce dépôt.
 
-**Solution.**
-
-```
-git config --global user.name "Votre Nom"
-```
+**Diagnostic.**
 
 ```
-git config --global user.email "votre.adresse@dauphine.tn"
+git remote -v
+```
+
+**Solution.** Corrigez l'adresse au lieu d'en ajouter une seconde :
+
+```
+git remote set-url origin git@github.com:VOTRECOMPTE/guide-survie.git
+```
+
+{: .note }
+> `git remote` ne modifie que le fichier `.git/config` de votre dépôt.
+> Supprimer ou changer une adresse **n'efface rien** sur GitHub et ne
+> touche pas à vos commits.
+
+---
+
+### `Updates were rejected because the remote contains work`
+
+Message complet :
+
+```
+! [rejected]        main -> main (fetch first)
+error: failed to push some refs
+```
+
+**Cause.** Le dépôt distant contient un commit que vous n'avez pas.
+Le plus souvent : vous avez coché une case à la création du dépôt sur
+GitHub, ou vous avez ajouté un fichier depuis l'interface web.
+
+**Solution avant la séance 5.** Supprimez le dépôt sur GitHub
+(**Settings**, tout en bas) et recréez-le **entièrement vide**, sans
+README ni licence ni `.gitignore`. Reprenez ensuite à l'étape 2 du TP3.
+
+**Solution à partir de la séance 5.**
+
+```
+git pull
+```
+
+puis, une fois l'intégration faite :
+
+```
+git push
 ```
 
 ---
 
-## Ma commande échoue et je ne vois pas pourquoi
+### `src refspec main does not match any`
 
-Vérifiez ces trois choses, dans l'ordre :
+**Cause.** La branche `main` n'existe pas dans votre dépôt. Soit elle
+porte un autre nom, soit vous n'avez encore fait aucun commit.
 
-1. **Avez-vous copié le `$` du début ?** Il ne fait pas partie de la
-   commande. Sur ce site, il n'y en a jamais : si vous en voyez un
-   ailleurs, ne le copiez pas.
-2. **Vos guillemets sont-ils droits ?** `"` et non `"` ou `"`. Les
-   guillemets courbes viennent de Word ou d'une conversation, et Git
-   ne les comprend pas. Ils sont presque impossibles à distinguer à
-   l'œil nu : retapez-les à la main en cas de doute.
-3. **Y a-t-il une faute de frappe ?** `git stauts` ne veut rien dire.
-   Utilisez la touche **Tab** et les flèches ↑ pour rappeler une
-   commande précédente.
+**Diagnostic.**
 
+```
+git branch
+```
+
+**Solution.** Si votre branche s'appelle `master`, renommez-la :
+
+```
+git branch -M main
+```
+
+Si la commande n'affiche rien, faites d'abord un commit : une branche
+sans commit n'existe pas vraiment.
+
+---
+
+### `fatal: repository not found`
+
+**Cause.** L'adresse du dépôt distant est erronée, ou le dépôt n'existe
+pas encore sur GitHub. Cette erreur apparaît aussi quand le dépôt est
+privé et que votre clé n'y donne pas accès.
+
+**Diagnostic.** Comparez ce que Git connaît avec ce que GitHub affiche :
+
+```
+git remote -v
+```
+
+**Solution.** Vérifiez le nom d'utilisateur et le nom du dépôt, puis
+corrigez :
+
+```
+git remote set-url origin git@github.com:VOTRECOMPTE/guide-survie.git
+```
+
+---
+
+### `git push` répond `fatal: No configured push destination`
+
+**Cause.** Aucun dépôt distant n'est configuré, ou votre distant ne
+s'appelle pas `origin` et Git ne sait pas lequel utiliser.
+
+**Solution.** Nommez-le explicitement une première fois :
+
+```
+git push -u <nom-du-distant> main
+```
+
+Les envois suivants se feront avec `git push` tout court.
+
+---
+
+### Mon fichier n'apparaît pas sur GitHub
+
+**Cause la plus fréquente.** Vous avez validé en local sans envoyer.
+
+**Diagnostic.**
+
+```
+git status
+```
+
+```
+git log --oneline
+```
+
+Si `git status` indique `Your branch is ahead of 'origin/main' by 1 commit`,
+tout est normal : il ne reste qu'à envoyer.
+
+```
+git push
+```
+
+**Autres causes.** Le fichier est peut-être listé dans `.gitignore`, ou
+n'a jamais été ajouté avec `git add`.

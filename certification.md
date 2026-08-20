@@ -117,6 +117,8 @@ Deux parcours complets sont recommandés par GitHub :
 Les deux couvrent les mêmes objectifs. Choisissez selon que vous
 préférez lire ou regarder.
 
+Datacamp offre également un cours gratuit pour préparer à la certification : [Datacamp Github Foundations](https://app.datacamp.com/learn/skill-tracks/github-foundations).
+
 ---
 
 ## S'inscrire
@@ -168,12 +170,10 @@ questions.
 ça se trouve. Une demi-heure passée à cliquer partout dans les
 **Settings** d'un dépôt vaut plusieurs pages de révision.
 
-**Le badge est valable deux ans.** Passez-le quand vous vous sentez
-prêt, sans précipitation.
+**Le badge est valable deux ans.** Passez-le quand vous vous sentez prêt, sans précipitation.
 
 ---
 
 ## Une question ?
 
-Venez m'en parler en séance. Je ne prépare pas l'examen dans ce cours,
-mais je peux vous orienter.
+Venez m'en parler en séance. Je ne prépare pas l'examen dans ce cours, mais je peux vous orienter.
