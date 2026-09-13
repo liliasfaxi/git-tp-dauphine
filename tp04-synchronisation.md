@@ -72,7 +72,7 @@ toujours.
 
 ## Étape 1 — Dernière visite à votre dépôt personnel
 
-En fin de TP 4, vous avez créé un fichier `LICENSE` **depuis
+En fin de TP 3, vous avez créé un fichier `LICENSE` **depuis
 GitHub**. Votre machine ne le connaît pas encore. Réglons ça.
 
 ```ssh
@@ -197,7 +197,7 @@ Ouvrez `data/fiches.js`. Sous le commentaire
 `// ===== AJOUTEZ VOS FICHES CI-DESSOUS =====`, collez ce bloc en
 remplaçant les quatre valeurs :
 
-```json
+```js
   {
     titre: "Le distributeur du deuxième",
     categorie: "Vie pratique",
@@ -261,7 +261,7 @@ Pour que Git puisse s'en sortir, vous allez modifier des endroits
 | Membre | Fichier | Où exactement |
 |---|---|---|
 | **1** | `data/fiches.js` | Une fiche **juste après** le commentaire `AJOUTEZ VOS FICHES CI-DESSOUS` |
-| **2** | `css/styles.css` | La couleur --couleur-accent |
+| **2** | `css/styles.css` | La couleur `--couleur-accent` |
 | **3** | `README.md` | Votre nom sous le commentaire `AJOUTEZ VOTRE NOM CI-DESSOUS` |
 | **4** | `index.html` | Un lien sous le commentaire `AJOUTEZ VOTRE LIEN CI-DESSOUS` |
 
@@ -311,11 +311,8 @@ Ceux qui ont été refusés tapent :
 git pull
 ```
 
-<pre class="highlight"><code>Auto-merging data/fiches.js
-Merge made by the 'ort' strategy.</code></pre>
-
-**Regardez bien ce message.** Git a pris les deux versions et les a
-combinées **tout seul**. Ouvrez le fichier : les deux contributions y
+**Regardez bien le message qui s'affiche.** Git a pris les deux versions et les a
+combinées **tout seul**. Ouvrez les fichiers : les deux contributions y
 sont.
 
 Il a fabriqué pour cela un commit spécial, appelé **commit de fusion**.
@@ -350,7 +347,7 @@ Ouvrez `index.html` : les quatre contributions sont sur le site.
 > différents**. Si vous aviez tous modifié la **même ligne**, il
 > n'aurait pas pu choisir : c'est ce qu'on appelle un **conflit**.
 >
-> Nous y consacrerons plus tard. Ne cherchez pas à le
+> Nous y consacrerons plus tard une séance entière. Ne cherchez pas à le
 > provoquer aujourd'hui.
 
 ---
@@ -358,7 +355,6 @@ Ouvrez `index.html` : les quatre contributions sont sur le site.
 
 ## Ce que vous devez avoir à la fin
 
-- [ ] Le fichier `LICENSE` est présent dans votre dépôt personnel
 - [ ] Un dossier `guide-groupe` sur votre machine
 - [ ] `git remote -v` y affiche l'adresse du dépôt du groupe
 - [ ] Le dépôt du groupe contient **cinq fiches ou plus** et les quatre
