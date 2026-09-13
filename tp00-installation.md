@@ -76,7 +76,7 @@ les bonnes. Ne cherchez pas à optimiser.
 
 Tapez simplement dans le terminal :
 
-```
+```ssh
 git --version
 ```
 
@@ -85,7 +85,7 @@ acceptez et patientez. Sinon, Git est déjà là.
 
 ### Linux (Ubuntu, Debian)
 
-```
+```ssh
 sudo apt update && sudo apt install git
 ```
 
@@ -95,7 +95,7 @@ sudo apt update && sudo apt install git
 
 Fermez puis rouvrez votre terminal, et tapez :
 
-```
+```ssh
 git --version
 ```
 
@@ -117,11 +117,11 @@ trente secondes pour l'écrire correctement.
 
 Remplacez le contenu entre guillemets par vos propres informations :
 
-```
+```ssh
 git config --global user.name "Amira Ben Salah"
 ```
 
-```
+```ssh
 git config --global user.email "amira.bensalah@dauphine.tn"
 ```
 
@@ -141,7 +141,7 @@ au fur et à mesure.
 
 ### Nommer la branche principale
 
-```
+```ssh
 git config --global init.defaultBranch main
 ```
 
@@ -152,7 +152,7 @@ retenez seulement que cette ligne vous évitera un avertissement gênant.
 
 ## Étape 5 — Vérifier votre configuration
 
-```
+```ssh
 git config --global --list
 ```
 
@@ -224,11 +224,11 @@ Deux raccourcis qui vous serviront tous les jours :
 
 Essayez maintenant :
 
-```
+```ssh
 pwd
 ```
 
-```
+```ssh
 ls
 ```
 

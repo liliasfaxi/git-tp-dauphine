@@ -69,7 +69,7 @@ chiffres obtenus.
 
 Dans votre terminal :
 
-```
+```ssh
 ls -al ~/.ssh
 ```
 
@@ -90,7 +90,7 @@ Cherchez un fichier nommé `id_ed25519.pub` ou `id_rsa.pub`.
 
 Remplacez l'adresse par la vôtre, celle de votre compte GitHub :
 
-```
+```ssh
 ssh-keygen -t ed25519 -C "amira.bensalah@dauphine.tn"
 ```
 
@@ -129,7 +129,7 @@ Une image en caractères s'affiche : c'est normal, votre paire est créée.
 L'agent SSH garde votre clé en mémoire pour éviter d'avoir à la
 retrouver à chaque commande.
 
-```
+```ssh
 eval "$(ssh-agent -s)"
 ```
 
@@ -137,13 +137,13 @@ Un numéro de processus s'affiche : c'est le signe que l'agent tourne.
 
 **Sur macOS :**
 
-```
+```ssh
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 ```
 
 **Sur Windows et Linux :**
 
-```
+```ssh
 ssh-add ~/.ssh/id_ed25519
 ```
 
@@ -157,19 +157,19 @@ Réponse attendue : `Identity added:` suivi du chemin de votre clé.
 
 **macOS :**
 
-```
+```ssh
 pbcopy < ~/.ssh/id_ed25519.pub
 ```
 
 **Windows (Git Bash) :**
 
-```
+```ssh
 clip < ~/.ssh/id_ed25519.pub
 ```
 
 **Linux :**
 
-```
+```ssh
 cat ~/.ssh/id_ed25519.pub
 ```
 
@@ -201,7 +201,7 @@ Votre clé doit :
 
 ## Étape 6 — Tester la connexion
 
-```
+```ssh
 ssh -T git@github.com
 ```
 
@@ -300,7 +300,7 @@ Reprenez dans l'ordre :
 
 1. **La clé est-elle chargée ?**
 
-   ```
+   ```ssh
    ssh-add -l
    ```
 
@@ -309,7 +309,7 @@ Reprenez dans l'ordre :
 2. **Avez-vous collé la bonne clé ?** Sur GitHub, dans **SSH and GPG keys**,
    comparez le début de la clé affichée avec :
 
-   ```
+   ```ssh
    cat ~/.ssh/id_ed25519.pub
    ```
 
@@ -354,7 +354,7 @@ Vous utiliserez alors les adresses en `https://` au lieu de
 
 Pour que Git le retienne :
 
-```
+```ssh
 git config --global credential.helper store
 ```
 

@@ -67,7 +67,7 @@ prêt.
 Ouvrez un terminal, et déplacez-vous dans le dossier du projet.
 Adaptez le chemin à votre machine :
 
-```
+```ssh
 cd <chemin-de-votre-projet>/guide-survie
 ```
 
@@ -76,11 +76,11 @@ cd <chemin-de-votre-projet>/guide-survie
 
 Vérifiez que vous êtes au bon endroit :
 
-```
+```ssh
 pwd
 ```
 
-```
+```ssh
 ls
 ```
 
@@ -98,7 +98,7 @@ Vous devez voir `index.html`, `README.md`, ainsi que les dossiers
 
 ## Étape 3 — Créer le dépôt
 
-```
+```ssh
 git init
 ```
 
@@ -110,7 +110,7 @@ Il vient de créer un dossier caché `.git` à la racine du projet.
 
 Vérifiez sa présence :
 
-```
+```ssh
 ls -a
 ```
 
@@ -125,7 +125,7 @@ dans la liste.
 
 ## Étape 4 — Votre premier `git status`
 
-```
+```ssh
 git status
 ```
 
@@ -167,7 +167,7 @@ comptent.
 
 ### Placer les fichiers dans la zone d'attente
 
-```
+```ssh
 git add .
 ```
 
@@ -175,7 +175,7 @@ Le point signifie « tout ce qui se trouve ici ».
 
 Regardez ce qui a changé :
 
-```
+```ssh
 git status
 ```
 
@@ -185,7 +185,7 @@ d'attente**. Rien n'est encore enregistré.
 
 ### Valider
 
-```
+```ssh
 git commit -m "Version initiale du projet"
 ```
 
@@ -195,7 +195,7 @@ enregistrement.
 
 Vérifiez une dernière fois :
 
-```
+```ssh
 git status
 ```
 
@@ -214,13 +214,13 @@ d'un dépôt Git.
 
 Ouvrez `index.html` dans votre éditeur de texte. Repérez la **ligne 12** :
 
-```
+```html
   <h1 class="entete__titre">Guide de Survie</h1>
 ```
 
 Remplacez-la par :
 
-```
+```html
   <h1 class="entete__titre">Guide de Survie — Promo 2026</h1>
 ```
 
@@ -229,7 +229,7 @@ navigateur : le titre a changé.
 
 ### Observer l'effet côté Git
 
-```
+```ssh
 git status
 ```
 
@@ -238,7 +238,7 @@ Git a remarqué la modification, mais elle n'est ni cadrée ni enregistrée.
 
 Voyez exactement ce qui a changé :
 
-```
+```ssh
 git diff
 ```
 
@@ -247,17 +247,17 @@ la nouvelle. Appuyez sur `q` pour sortir.
 
 ### Enregistrer
 
-```
+```ssh
 git add index.html
 ```
 
-```
+```ssh
 git status
 ```
 
 Le fichier est passé en vert : il est dans la zone d'attente.
 
-```
+```ssh
 git commit -m "Modification du titre du site"
 ```
 
@@ -272,28 +272,28 @@ git commit -m "Modification du titre du site"
 
 Ouvrez `README.md`. Trouvez la ligne :
 
-```
+```html
 <!-- ===== AJOUTEZ VOTRE NOM CI-DESSOUS ===== -->
 ```
 
 Ajoutez **juste en dessous** une ligne à votre nom, en respectant
 exactement ce format :
 
-```
+```html
 - Amira Ben Salah — étudiante
 ```
 
 Enregistrez, puis déroulez le cycle complet vous-même :
 
-```
+```ssh
 git status
 ```
 
-```
+```ssh
 git add README.md
 ```
 
-```
+```ssh
 git commit -m "Ajout de mon nom aux contributeurs"
 ```
 
@@ -311,11 +311,11 @@ personnelles, vos essais, les fichiers créés par votre système.
 
 ### Créer un fichier de notes
 
-```
+```ssh
 echo "Mes notes perso pour le TP" > notes.txt
 ```
 
-```
+```ssh
 git status
 ```
 
@@ -327,19 +327,19 @@ pour toujours, visible par tout le monde.
 
 Ouvrez le fichier `.gitignore` dans votre éditeur. Trouvez la ligne :
 
-```
+```html
 # ===== AJOUTEZ VOS FICHIERS À IGNORER CI-DESSOUS =====
 ```
 
 Ajoutez juste en dessous :
 
-```
+```html
 notes.txt
 ```
 
 Enregistrez, puis :
 
-```
+```ssh
 git status
 ```
 
@@ -348,11 +348,11 @@ votre disque, mais Git ne le voit plus.
 
 ### Enregistrer cette décision
 
-```
+```ssh
 git add .gitignore
 ```
 
-```
+```ssh
 git commit -m "Ignorer le fichier de notes personnelles"
 ```
 
@@ -370,14 +370,14 @@ git commit -m "Ignorer le fichier de notes personnelles"
 
 ## Étape 9 — Relire son travail
 
-```
+```ssh
 git log --oneline
 ```
 
 Vous devez voir vos quatre enregistrements, du plus récent au plus
 ancien :
 
-```
+```ssh
 9c4e2a1 Ignorer le fichier de notes personnelles
 7b3d8f5 Ajout de mon nom aux contributeurs
 2e9a4c7 Modification du titre du site
@@ -389,7 +389,7 @@ auquel vous pourrez revenir.
 
 Pour voir le détail, avec l'auteur et la date :
 
-```
+```ssh
 git log
 ```
 
@@ -399,6 +399,9 @@ Sortez avec `q`.
 > Les identifiants affichés chez vous seront différents de ceux-ci.
 > C'est normal : ils dépendent du contenu, de l'auteur et de l'heure.
 > Nous verrons pourquoi en séance 6.
+
+{: .note }
+> Ce dépôt est le vôtre. À partir de la séance 5, votre groupe travaillera sur un dépôt commun — mais celui-ci restera à vous.
 
 ---
 

@@ -40,15 +40,15 @@ quatre commits, et depuis la séance 3, une connexion SSH fonctionnelle.
 
 Vérifiez les deux :
 
-```
+```ssh
 cd <chemin de votre projet>/guide-survie
 ```
 
-```
+```ssh
 git log --oneline
 ```
 
-```
+```ssh
 ssh -T git@github.com
 ```
 
@@ -85,13 +85,13 @@ l'adresse. Elle ressemble à `git@github.com:amira-bensalah/guide-survie.git`.
 
 Dans votre terminal, en remplaçant par votre propre adresse :
 
-```
+```ssh
 git remote add origin git@github.com:amira-bensalah/guide-survie.git
 ```
 
 Vérifiez :
 
-```
+```ssh
 git remote -v
 ```
 
@@ -109,7 +109,7 @@ le fichier `.git/config` de votre projet.
 
 ## Étape 3 — Le premier envoi
 
-```
+```ssh
 git push -u origin main
 ```
 
@@ -138,7 +138,7 @@ commits et votre nom sur chacun.
 
 Ouvrez `css/style.css`. La **ligne 4** contient :
 
-```
+```css
   --couleur-accent: #C41E3A;
 ```
 
@@ -159,19 +159,19 @@ sera notre terrain de conflit en séance 9.
 
 Déroulez le cycle :
 
-```
+```ssh
 git status
 ```
 
-```
+```ssh
 git add css/style.css
 ```
 
-```
+```ssh
 git commit -m "Nouvelle couleur d'accent"
 ```
 
-```
+```ssh
 git push
 ```
 
@@ -185,30 +185,30 @@ En séance 2, vous avez téléchargé un ZIP. Voyons ce qui lui manquait.
 
 Placez-vous ailleurs que dans votre projet :
 
-```
+```ssh
 cd ~/Desktop
 ```
 
 Puis clonez votre propre dépôt sous un autre nom :
 
-```
+```ssh
 git clone git@github.com:amira-bensalah/guide-survie.git essai-clone
 ```
 
 {: .note }
 > Si vous ne retrouvez plus l'adresse de votre dépôt, cliquez sur le bouton vert **< > Code** dans la page principale de votre dépôt github, puis sur SSH.
 
-```
+```ssh
 cd essai-clone
 ```
 
-```
+```ssh
 git log --oneline
 ```
 
 **Vos cinq commits sont là.** Et :
 
-```
+```ssh
 git remote -v
 ```
 
@@ -256,7 +256,7 @@ descriptions. Autant l'apprendre maintenant.
 Ouvrez `README.md` et ajoutez ceci **tout à la fin**, en adaptant le
 contenu :
 
-```
+```md
 ## Ce qu'il reste à faire
 
 - [x] Mettre le projet en ligne
@@ -272,15 +272,15 @@ contenu :
 
 Enregistrez, puis :
 
-```
+```ssh
 git add README.md
 ```
 
-```
+```ssh
 git commit -m "Ajout de la liste des taches au README"
 ```
 
-```
+```ssh
 git push
 ```
 
@@ -347,6 +347,55 @@ qui se fait.
 
 ---
 
+## Étape 9 — Former votre groupe
+
+Jusqu'ici, chacun travaillait sur son propre dépôt. **À partir de la
+prochaine séance, votre groupe travaillera sur un seul.**
+
+### Désigner le dépôt du groupe
+
+Votre groupe choisit l'un de ses quatre dépôts : ce sera **le dépôt du
+groupe** pour tout le reste du semestre. Son propriétaire est le
+**pilote**.
+
+Les trois autres dépôts ne disparaissent pas. Ils restent les vôtres :
+la trace de vos premiers pas, et un projet de plus sur votre profil.
+
+### Le pilote invite les trois autres
+
+Sur le dépôt du groupe :
+
+1. **Settings** → **Collaborators**
+2. **Add people**
+3. Saisir le nom d'utilisateur GitHub de chaque membre, un par un
+4. **Add to this repository**
+
+{: .note }
+> Sur un dépôt personnel, un collaborateur obtient directement l'accès
+> en **écriture** : il pourra pousser comme le propriétaire. Les cinq
+> niveaux de droits vus en cours n'existent que dans les organisations.
+
+### Les trois autres acceptent
+
+L'invitation arrive dans les notifications GitHub — l'icône en forme de
+**cloche**, en haut à droite — et par mail. Cliquez sur
+**Accept invitation**.
+
+{: .warning }
+> **Faites-le avant de partir.** Sans invitation acceptée, vous ne
+> pourrez rien faire à la prochaine séance.
+
+### Notez l'adresse
+
+Chaque membre note l'adresse SSH du dépôt du groupe. Vous en aurez
+besoin dès le début de la séance suivante :
+
+```ssh
+git@github.com:LE-PILOTE/guide-survie.git
+```
+
+---
+
 ## Ce que vous devez avoir à la fin
 
 - [ ] Un dépôt `guide-survie` visible sur votre compte GitHub
@@ -355,6 +404,9 @@ qui se fait.
 - [ ] Le README affiche une liste de tâches mise en forme
 - [ ] Un fichier `LICENSE` existe sur GitHub
 - [ ] Vous savez ce que contiennent les onglets Insights et Settings
+- [ ] Votre groupe a désigné son dépôt et **tout le monde a accepté l'invitation**
+- [ ] Vous avez noté l'adresse SSH du dépôt du groupe
+
 
 ---
 

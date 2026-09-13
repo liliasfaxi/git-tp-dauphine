@@ -52,15 +52,11 @@ Les commandes du module, avec ce qu'elles font vraiment.
 
 ---
 {% endif %}
+{% if site.seance >= 9 %}{% include antiseche/s09.md %}
+
+---
+{% endif %}
 {% if site.seance >= 10 %}{% include antiseche/s10.md %}
-
----
-{% endif %}
-{% if site.seance >= 11 %}{% include antiseche/s11.md %}
-
----
-{% endif %}
-{% if site.seance >= 12 %}{% include antiseche/s12.md %}
 
 ---
 {% endif %}
