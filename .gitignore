@@ -5,3 +5,4 @@ Gemfile.lock
 .DS_Store
 run.sh
 vendor/
+save_seance.sh
