@@ -1,7 +1,7 @@
 ---
 title: "TP2 · Se connecter à GitHub"
 nav_order: 4
-published: false
+published: true
 ---
 
 # TP2 — Se connecter à GitHub
@@ -221,7 +221,7 @@ but GitHub does not provide shell access.</code></pre>
 reconnaît, il vous signale simplement qu'on ne peut pas s'y connecter
 comme sur un serveur classique. C'est normal et attendu.
 
-Si votre nom d'utilisateur s'affiche, **votre TP est terminé.**
+Si votre nom d'utilisateur s'affiche, **cette partie est terminée.**
 
 {: .note }
 > Terminé en avance ? Aidez les autres membres de votre groupe.
