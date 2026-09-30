@@ -1,7 +1,7 @@
 ---
 title: "TP3 · Dépôts distants"
 nav_order: 5
-published: false
+published: true
 ---
 
 # TP3 — Mettre son projet en ligne
