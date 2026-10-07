@@ -362,7 +362,7 @@ Ouvrez `index.html` : les quatre contributions sont sur le site.
 > git log --oneline --graph
 > ```
 >
-> **2.** Votre fichier `index.html`, celui du dossier `guide-groupe`.
+> **2.** Un lien vers le dépôt github du pilote.
 >
 > Déposez les deux fichiers sur SharePoint, dans le répertoire du cours :
 >
