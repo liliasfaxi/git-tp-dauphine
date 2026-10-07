@@ -9,7 +9,7 @@ remote_theme: just-the-docs/just-the-docs
 #  Au début de chaque séance : augmentez de 1, commit, push.
 #  C'est la seule ligne à modifier.
 # ==========================================================
-seance: 4
+seance: 5
 
 plugins:
   - jekyll-remote-theme
@@ -18,6 +18,8 @@ color_scheme: light
 search_enabled: true
 enable_copy_code_button: true
 heading_anchors: true
+
+
 
 # Liens affichés en haut à droite du site
 aux_links:

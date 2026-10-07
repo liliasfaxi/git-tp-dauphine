@@ -1,7 +1,7 @@
 ---
 title: "TP4 · Se synchroniser"
 nav_order: 6
-published: false
+published: true
 ---
 
 # TP4 — Travailler à plusieurs sur un même dépôt
@@ -41,11 +41,11 @@ published: false
 Ces deux commandes vous éviteront deux blocages garantis aujourd'hui.
 Tapez-les avant tout le reste.
 
-```ssh
+```bash
 git config --global pull.rebase false
 ```
 
-```ssh
+```bash
 git config --global core.editor "nano"
 ```
 
@@ -75,20 +75,20 @@ toujours.
 En fin de TP 3, vous avez créé un fichier `LICENSE` **depuis
 GitHub**. Votre machine ne le connaît pas encore. Réglons ça.
 
-```ssh
+```bash
 cd ~/Desktop/guide-survie
 ```
 
 ### Aller voir sans rien changer
 
-```ssh
+```bash
 git fetch
 ```
 
 Cette commande ne modifie **aucun** de vos fichiers. Elle va simplement
 prendre des nouvelles du dépôt distant.
 
-```ssh
+```bash
 git status
 ```
 
@@ -103,7 +103,7 @@ mais il attend votre feu vert.
 
 ### Intégrer
 
-```ssh
+```bash
 git pull
 ```
 
@@ -111,7 +111,7 @@ git pull
  LICENSE | 1 +
  1 file changed, 1 insertion(+)</code></pre>
 
-```ssh
+```bash
 ls
 ```
 
@@ -135,32 +135,32 @@ simple. Nous verrons l'autre dans un instant.
 ## Étape 2 — Récupérer le dépôt du groupe
 
 Vous avez tous accepté l'invitation en fin de séance 4. Sinon,
-faites-le maintenant : icône **cloche** en haut à droite sur GitHub.
+faites-le maintenant : icône de notification en haut à droite sur GitHub.
 
 **Les quatre membres** du groupe, y compris le pilote, clonent le dépôt
 du groupe dans un dossier nommé `guide-groupe` :
 
-```ssh
+```bash
 cd ~/Desktop
 ```
 
-```ssh
+```bash
 git clone git@github.com:LE-PILOTE/guide-survie.git guide-groupe
 ```
 
-```ssh
+```bash
 cd guide-groupe
 ```
 
 Vérifiez que vous êtes bien reliés au même dépôt :
 
-```ssh
+```bash
 git remote -v
 ```
 
 Les quatre membres doivent voir **exactement la même adresse**.
 
-```ssh
+```bash
 git log --oneline
 ```
 
@@ -175,7 +175,7 @@ d'un seul projet.**
 >
 > Prenez le réflexe de vérifier avant chaque commande :
 >
-> ```ssh
+> ```bash
 > pwd
 > ```
 
@@ -208,15 +208,15 @@ remplaçant les quatre valeurs :
 
 Puis :
 
-```ssh
+```bash
 git add data/fiches.js
 ```
 
-```ssh
+```bash
 git commit -m "Ajout de la fiche d'Amira"
 ```
 
-```ssh
+```bash
 git push
 ```
 
@@ -224,7 +224,7 @@ Annoncez à voix haute : **« c'est poussé »**.
 
 ### Les trois autres
 
-```ssh
+```bash
 git pull
 ```
 
@@ -235,7 +235,7 @@ Le suivant peut y aller.
 
 ### Après les quatre tours
 
-```ssh
+```bash
 git log --oneline
 ```
 
@@ -261,7 +261,7 @@ Pour que Git puisse s'en sortir, vous allez modifier des endroits
 | Membre | Fichier | Où exactement |
 |---|---|---|
 | **1** | `data/fiches.js` | Une fiche **juste après** le commentaire `AJOUTEZ VOS FICHES CI-DESSOUS` |
-| **2** | `css/styles.css` | La couleur `--couleur-accent` |
+| **2** | `data/fiches.js` | Une fiche **juste avant** le commentaire `FIN DE VOS FICHES` |
 | **3** | `README.md` | Votre nom sous le commentaire `AJOUTEZ VOTRE NOM CI-DESSOUS` |
 | **4** | `index.html` | Un lien sous le commentaire `AJOUTEZ VOTRE LIEN CI-DESSOUS` |
 
@@ -275,17 +275,17 @@ Le bloc pour le membre 4 :
 
 **Sans faire de `git pull`**, chacun de son côté :
 
-```ssh
+```bash
 git add .
 ```
 
-```ssh
+```bash
 git commit -m "Ma contribution"
 ```
 
 ### 3. Tout le monde pousse en même temps
 
-```ssh
+```bash
 git push
 ```
 
@@ -307,7 +307,7 @@ hint: not have locally.</code></pre>
 
 Ceux qui ont été refusés tapent :
 
-```ssh
+```bash
 git pull
 ```
 
@@ -317,7 +317,7 @@ sont.
 
 Il a fabriqué pour cela un commit spécial, appelé **commit de fusion**.
 
-```ssh
+```bash
 git push
 ```
 
@@ -327,13 +327,13 @@ exactement ce qui se passe dans une équipe qui travaille vite.
 
 Quand tout le monde a poussé, chacun récupère la version finale :
 
-```ssh
+```bash
 git pull
 ```
 
 ### 5. Regarder l'historique
 
-```ssh
+```bash
 git log --oneline --graph
 ```
 
@@ -352,9 +352,35 @@ Ouvrez `index.html` : les quatre contributions sont sur le site.
 
 ---
 
+{: .rendu }
+> ## À rendre avant de partir
+> {: .no_toc }
+>
+> **1.** Une capture d'écran du résultat de :
+>
+> ```
+> git log --oneline --graph
+> ```
+>
+> **2.** Votre fichier `index.html`, celui du dossier `guide-groupe`.
+>
+> Déposez les deux fichiers sur SharePoint, dans le répertoire du cours :
+>
+> ```
+> Gérer du code avec Git et Github / Soumissions / Groupe <numéro> / TP4
+> ```
+>
+> **Un seul dépôt par groupe.** Nommez vos fichiers avec votre numéro de
+> groupe, par exemple `groupe3-log.png` et `groupe3-index.html`.
+
+---
+
+
+
 
 ## Ce que vous devez avoir à la fin
 
+- [ ] Le fichier LICENSE présent dans votre dépôt personnel
 - [ ] Un dossier `guide-groupe` sur votre machine
 - [ ] `git remote -v` y affiche l'adresse du dépôt du groupe
 - [ ] Le dépôt du groupe contient **cinq fiches ou plus** et les quatre

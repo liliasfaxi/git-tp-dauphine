@@ -40,15 +40,15 @@ quatre commits, et depuis la séance 3, une connexion SSH fonctionnelle.
 
 Vérifiez les deux :
 
-```ssh
+```bash
 cd <chemin de votre projet>/guide-survie
 ```
 
-```ssh
+```bash
 git log --oneline
 ```
 
-```ssh
+```bash
 ssh -T git@github.com
 ```
 
@@ -85,13 +85,13 @@ l'adresse. Elle ressemble à `git@github.com:amira-bensalah/guide-survie.git`.
 
 Dans votre terminal, en remplaçant par votre propre adresse :
 
-```ssh
+```bash
 git remote add origin git@github.com:amira-bensalah/guide-survie.git
 ```
 
 Vérifiez :
 
-```ssh
+```bash
 git remote -v
 ```
 
@@ -109,7 +109,7 @@ le fichier `.git/config` de votre projet.
 
 ## Étape 3 — Le premier envoi
 
-```ssh
+```bash
 git push -u origin main
 ```
 
@@ -136,7 +136,7 @@ commits et votre nom sur chacun.
 
 ## Étape 4 — T04 : changer la couleur du site
 
-Ouvrez `css/style.css`. La **ligne 4** contient :
+Dans le dépôt local sur votre machine, ouvrez `css/style.css`. La **ligne 4** contient :
 
 ```css
   --couleur-accent: #C41E3A;
@@ -159,19 +159,19 @@ sera notre terrain de conflit en séance 9.
 
 Déroulez le cycle :
 
-```ssh
+```bash
 git status
 ```
 
-```ssh
+```bash
 git add css/style.css
 ```
 
-```ssh
+```bash
 git commit -m "Nouvelle couleur d'accent"
 ```
 
-```ssh
+```bash
 git push
 ```
 
@@ -185,30 +185,30 @@ En séance 2, vous avez téléchargé un ZIP. Voyons ce qui lui manquait.
 
 Placez-vous ailleurs que dans votre projet :
 
-```ssh
+```bash
 cd ~/Desktop
 ```
 
 Puis clonez votre propre dépôt sous un autre nom :
 
-```ssh
+```bash
 git clone git@github.com:amira-bensalah/guide-survie.git essai-clone
 ```
 
 {: .note }
 > Si vous ne retrouvez plus l'adresse de votre dépôt, cliquez sur le bouton vert **< > Code** dans la page principale de votre dépôt github, puis sur SSH.
 
-```ssh
+```bash
 cd essai-clone
 ```
 
-```ssh
+```bash
 git log --oneline
 ```
 
 **Vos cinq commits sont là.** Et :
 
-```ssh
+```bash
 git remote -v
 ```
 
@@ -272,15 +272,15 @@ contenu :
 
 Enregistrez, puis :
 
-```ssh
+```bash
 git add README.md
 ```
 
-```ssh
+```bash
 git commit -m "Ajout de la liste des taches au README"
 ```
 
-```ssh
+```bash
 git push
 ```
 
@@ -390,7 +390,7 @@ L'invitation arrive dans les notifications GitHub — l'icône en forme de
 Chaque membre note l'adresse SSH du dépôt du groupe. Vous en aurez
 besoin dès le début de la séance suivante :
 
-```ssh
+```bash
 git@github.com:LE-PILOTE/guide-survie.git
 ```
 

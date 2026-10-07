@@ -356,3 +356,98 @@ git push
 
 **Autres causes.** Le fichier est peut-être listé dans `.gitignore`, ou
 n'a jamais été ajouté avec `git add`.
+
+### `error: Your local changes would be overwritten by checkout`
+
+**Cause.** Vous essayez de changer de branche avec des modifications non
+validées qui seraient écrasées.
+
+**Solution 1 — valider.**
+
+```
+git commit -am "Mon travail en cours"
+```
+
+**Solution 2 — mettre de côté.**
+
+```
+git stash
+```
+
+puis, une fois revenu sur la bonne branche :
+
+```
+git stash pop
+```
+
+---
+
+### `fatal: a branch named 'x' already exists`
+
+**Cause.** Vous avez utilisé `git switch -c` sur une branche qui existe
+déjà.
+
+**Solution.** Allez-y sans créer :
+
+```
+git switch fiche-amira
+```
+
+---
+
+### `fatal: invalid reference: x`
+
+**Cause.** Vous demandez une branche qui n'existe pas. Le plus souvent,
+une faute de frappe ou un oubli du `-c`.
+
+**Diagnostic.**
+
+```
+git branch -a
+```
+
+L'option `-a` montre aussi les branches présentes sur GitHub.
+
+---
+
+### `The current branch x has no upstream branch`
+
+Message complet :
+
+```
+fatal: The current branch fiche-amira has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin fiche-amira
+```
+
+**Cause.** C'est le premier envoi de cette branche : Git ne sait pas
+encore où la pousser.
+
+**Solution.** Faites ce que le message propose. `-u` est la forme courte
+de `--set-upstream` :
+
+```
+git push -u origin fiche-amira
+```
+
+---
+
+### Mes fiches ont disparu du fichier
+
+**Ce n'est pas une panne.** Vous avez changé de branche : Git a remplacé
+le contenu de votre dossier par celui de la branche demandée.
+
+**Diagnostic.**
+
+```
+git branch
+```
+
+L'astérisque indique où vous êtes. Revenez sur votre branche :
+
+```
+git switch fiche-amira
+```
+
+Rien n'est perdu : les deux versions coexistent dans le dossier `.git`.

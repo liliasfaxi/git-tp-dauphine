@@ -67,7 +67,7 @@ prêt.
 Ouvrez un terminal, et déplacez-vous dans le dossier du projet.
 Adaptez le chemin à votre machine :
 
-```ssh
+```bash
 cd <chemin-de-votre-projet>/guide-survie
 ```
 
@@ -76,11 +76,11 @@ cd <chemin-de-votre-projet>/guide-survie
 
 Vérifiez que vous êtes au bon endroit :
 
-```ssh
+```bash
 pwd
 ```
 
-```ssh
+```bash
 ls
 ```
 
@@ -98,7 +98,7 @@ Vous devez voir `index.html`, `README.md`, ainsi que les dossiers
 
 ## Étape 3 — Créer le dépôt
 
-```ssh
+```bash
 git init
 ```
 
@@ -110,7 +110,7 @@ Il vient de créer un dossier caché `.git` à la racine du projet.
 
 Vérifiez sa présence :
 
-```ssh
+```bash
 ls -a
 ```
 
@@ -125,7 +125,7 @@ dans la liste.
 
 ## Étape 4 — Votre premier `git status`
 
-```ssh
+```bash
 git status
 ```
 
@@ -167,7 +167,7 @@ comptent.
 
 ### Placer les fichiers dans la zone d'attente
 
-```ssh
+```bash
 git add .
 ```
 
@@ -175,7 +175,7 @@ Le point signifie « tout ce qui se trouve ici ».
 
 Regardez ce qui a changé :
 
-```ssh
+```bash
 git status
 ```
 
@@ -185,7 +185,7 @@ d'attente**. Rien n'est encore enregistré.
 
 ### Valider
 
-```ssh
+```bash
 git commit -m "Version initiale du projet"
 ```
 
@@ -195,7 +195,7 @@ enregistrement.
 
 Vérifiez une dernière fois :
 
-```ssh
+```bash
 git status
 ```
 
@@ -229,7 +229,7 @@ navigateur : le titre a changé.
 
 ### Observer l'effet côté Git
 
-```ssh
+```bash
 git status
 ```
 
@@ -238,7 +238,7 @@ Git a remarqué la modification, mais elle n'est ni cadrée ni enregistrée.
 
 Voyez exactement ce qui a changé :
 
-```ssh
+```bash
 git diff
 ```
 
@@ -247,17 +247,17 @@ la nouvelle. Appuyez sur `q` pour sortir.
 
 ### Enregistrer
 
-```ssh
+```bash
 git add index.html
 ```
 
-```ssh
+```bash
 git status
 ```
 
 Le fichier est passé en vert : il est dans la zone d'attente.
 
-```ssh
+```bash
 git commit -m "Modification du titre du site"
 ```
 
@@ -285,15 +285,15 @@ exactement ce format :
 
 Enregistrez, puis déroulez le cycle complet vous-même :
 
-```ssh
+```bash
 git status
 ```
 
-```ssh
+```bash
 git add README.md
 ```
 
-```ssh
+```bash
 git commit -m "Ajout de mon nom aux contributeurs"
 ```
 
@@ -311,11 +311,11 @@ personnelles, vos essais, les fichiers créés par votre système.
 
 ### Créer un fichier de notes
 
-```ssh
+```bash
 echo "Mes notes perso pour le TP" > notes.txt
 ```
 
-```ssh
+```bash
 git status
 ```
 
@@ -339,7 +339,7 @@ notes.txt
 
 Enregistrez, puis :
 
-```ssh
+```bash
 git status
 ```
 
@@ -348,11 +348,11 @@ votre disque, mais Git ne le voit plus.
 
 ### Enregistrer cette décision
 
-```ssh
+```bash
 git add .gitignore
 ```
 
-```ssh
+```bash
 git commit -m "Ignorer le fichier de notes personnelles"
 ```
 
@@ -370,14 +370,14 @@ git commit -m "Ignorer le fichier de notes personnelles"
 
 ## Étape 9 — Relire son travail
 
-```ssh
+```bash
 git log --oneline
 ```
 
 Vous devez voir vos quatre enregistrements, du plus récent au plus
 ancien :
 
-```ssh
+```bash
 9c4e2a1 Ignorer le fichier de notes personnelles
 7b3d8f5 Ajout de mon nom aux contributeurs
 2e9a4c7 Modification du titre du site
@@ -389,7 +389,7 @@ auquel vous pourrez revenir.
 
 Pour voir le détail, avec l'auteur et la date :
 
-```ssh
+```bash
 git log
 ```
 

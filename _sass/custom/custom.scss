@@ -65,3 +65,77 @@ $nb-ressources: 3;
   text-transform: uppercase;
   color: #959396;
 }
+
+/* =====================================================
+   ENCADRÉS — définis ici, sans dépendre des callouts
+   du thème. Fonctionne avec {: .note }, {: .warning }
+   et {: .rendu } posés sur une citation.
+   ===================================================== */
+
+blockquote.note,
+blockquote.warning,
+blockquote.rendu {
+  border: 1px solid;
+  border-left-width: 5px;
+  border-radius: 4px;
+  padding: 0.9rem 1.2rem;
+  margin: 1.6rem 0;
+}
+
+blockquote.note > :first-child,
+blockquote.warning > :first-child,
+blockquote.rendu > :first-child { margin-top: 0; }
+
+blockquote.note > :last-child,
+blockquote.warning > :last-child,
+blockquote.rendu > :last-child { margin-bottom: 0; }
+
+/* ---- Bleu : une précision, un rappel ---- */
+blockquote.note {
+  background-color: #EAF2FB;
+  border-color: #B6D4F2;
+  border-left-color: #2C6FBB;
+}
+
+/* ---- Rouge : un piège, une erreur à éviter ---- */
+blockquote.warning {
+  background-color: #FDECEC;
+  border-color: #F3BFBF;
+  border-left-color: #C41E3A;
+}
+
+/* ---- Orange : à rendre ---- */
+blockquote.rendu {
+  background-color: #FFF4E5;
+  border-color: #F0C98A;
+  border-left-color: #D97706;
+}
+
+blockquote.rendu h2,
+blockquote.rendu h3 {
+  margin-top: 0;
+  color: #92400E;
+}
+
+/* Le code reste lisible sur fond coloré */
+blockquote.note code,
+blockquote.warning code,
+blockquote.rendu code {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+/* ---- Tableaux ---- */
+table thead th {
+  background-color: #3A3A3A;
+  color: #fff;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #F7F7F9;
+}
+
+/* ---- Titres de section ---- */
+h2 {
+  border-bottom: 2px solid #E6E3E8;
+  padding-bottom: 0.3rem;
+}
