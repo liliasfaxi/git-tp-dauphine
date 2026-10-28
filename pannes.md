@@ -357,6 +357,7 @@ git push
 **Autres causes.** Le fichier est peut-être listé dans `.gitignore`, ou
 n'a jamais été ajouté avec `git add`.
 
+## Les Branches
 ### `error: Your local changes would be overwritten by checkout`
 
 **Cause.** Vous essayez de changer de branche avec des modifications non
@@ -451,3 +452,102 @@ git switch fiche-amira
 ```
 
 Rien n'est perdu : les deux versions coexistent dans le dossier `.git`.
+
+### `error: the branch '<nom>' is not fully merged`
+
+```
+error: the branch 'essai' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D essai'
+```
+
+**Ce n'est pas une erreur, c'est un garde-fou.** `git branch -d` refuse de supprimer une branche dont le travail n'existe nulle part ailleurs.
+
+Deux cas :
+
+- **vous savez** que cette branche ne contient rien d'utile (une branche d'essai, par exemple) → `git branch -D <nom>` ;
+- **vous n'êtes pas sûre** → laissez-la vivre. Une branche qui traîne ne coûte rien. Fusionnez-la d'abord, supprimez-la ensuite.
+
+
+## Fusions et conflits
+### `CONFLICT (content): Merge conflict in <fichier>`
+
+```
+Auto-merging css/style.css
+CONFLICT (content): Merge conflict in css/style.css
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+**Ce n'est pas une panne.** Deux branches ont modifié la même ligne, et Git refuse de choisir à votre place.
+
+Les quatre gestes, dans l'ordre : `git status` → ouvrir le fichier et enlever les balises → `git add <fichier>` → `git commit`.
+
+Et si vous préférez tout annuler : `git merge --abort`.
+
+---
+
+### `error: Your local changes to the following files would be overwritten by merge`
+
+```
+error: Your local changes to the following files would be overwritten by merge:
+	data/fiches.js
+Please commit your changes or stash them before you merge.
+```
+
+Vous avez des modifications **non commitées**, et la fusion veut toucher les mêmes fichiers. Git protège votre travail en cours.
+
+Deux sorties :
+
+```bash
+git add .
+git commit -m "Travail en cours"
+```
+
+ou, si ces modifications n'étaient qu'un essai :
+
+```bash
+git stash
+```
+
+Puis relancez votre `git merge`.
+
+---
+
+### `fatal: There is no merge to abort`
+
+Vous avez tapé `git merge --abort` alors qu'aucune fusion n'est en cours. Soit vous l'avez déjà annulée, soit la fusion s'est bien passée et il n'y avait rien à annuler.
+
+Un `git status` vous dira où vous en êtes réellement.
+
+---
+
+### `error: Committing is not possible because you have unmerged files`
+
+```
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+fatal: Exiting because of an unresolved conflict
+```
+
+Vous essayez de commiter alors qu'un conflit n'est pas réglé. Il manque l'étape 3 des quatre gestes :
+
+```bash
+git status            # quel fichier est encore en "both modified" ?
+git add <ce-fichier>  # après avoir enlevé les balises
+git commit
+```
+
+> Si `git add` ne suffit pas, c'est qu'il reste des `<<<<<<<`, `=======` ou `>>>>>>>` dans le fichier. Cherchez-les, il en reste toujours un.
+
+---
+
+### Le site est cassé après une résolution de conflit
+
+Page blanche, fiches disparues, couleurs parties : vous avez presque certainement oublié une balise de conflit dans le fichier. Un `<<<<<<< HEAD` au milieu d'un `.js` ou d'un `.css`, et le navigateur abandonne.
+
+Ouvrez le fichier et cherchez les chevrons. S'il reste un doute :
+
+```bash
+git diff
+```
+
+Les balises oubliées y sautent aux yeux.

@@ -1,7 +1,7 @@
 ---
 title: "TP5 · Les branches"
 nav_order: 7
-published: false
+published: true
 ---
 
 # TP5 — Travailler chacun sur sa branche
@@ -323,6 +323,8 @@ avancent en parallèle. Chacune porte les commits d'un membre.
 
 C'est l'image exacte de ce que vous venez de faire : quatre personnes
 travaillant en même temps, sans jamais se gêner.
+
+Notez également l'emplacement du **HEAD** pour chaque membre du groupe: **HEAD** pointe sur la branche du membre en question. 
 
 {: .note }
 > La semaine prochaine, ces quatre lignes se rejoindront. Vous verrez
